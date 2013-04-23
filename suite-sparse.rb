@@ -2,8 +2,8 @@ require 'formula'
 
 class SuiteSparse < Formula
   homepage 'http://www.cise.ufl.edu/research/sparse/SuiteSparse'
-  url 'http://www.cise.ufl.edu/research/sparse/SuiteSparse/SuiteSparse-4.1.0.tar.gz'
-  sha1 '93a0ae741b399d0dbecd43235d2f8977cdd9bc47'
+  url 'http://www.cise.ufl.edu/research/sparse/SuiteSparse/SuiteSparse-4.2.0.tar.gz'
+  sha1 'd99f88afc69ee4d073541ff7a68bc4f26bda5853'
 
   option "without-tbb", "Do not link with tbb (Threading Building Block)"
   option "with-metis", "Compile in metis 4.x libraries"
@@ -37,9 +37,6 @@ class SuiteSparse < Formula
       if build.include? "with-metis"
         s.remove_make_var! "METIS_PATH"
         s.change_make_var! "METIS", Formula.factory("metis4").lib + "libmetis.a"
-      else
-        # Use -DNCAMD to work around apparent bug in -I setup, matching 4.0.2 behavior
-        s.change_make_var! "CHOLMOD_CONFIG", "-DNCAMD"
       end
 
       s.change_make_var! "INSTALL_LIB", lib
