@@ -11,6 +11,8 @@ class Blast < Formula
   def install
     args = ["--prefix=#{prefix}"]
     args << "--with-dll" if build.include? 'with-dll'
+    # Blast 2.2.28 is incompatible with newer gnutls (#161)
+    args << "--without-gnutls"
 
     cd 'c++' do
       system "./configure", *args
