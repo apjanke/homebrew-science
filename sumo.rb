@@ -20,6 +20,7 @@ class Sumo < Formula
   depends_on "libpng"
   depends_on "jpeg"
   depends_on "libtiff"
+  depends_on "freetype"
   depends_on "proj"
   depends_on "gdal"
   depends_on "homebrew/x11/fox"
