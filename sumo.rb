@@ -12,7 +12,8 @@ class Sumo < Formula
     sha256 "ead5586821fcf6e32a1d8bbfe040b1f6349973f7963559fb0d44321f3ed84af1" => :mavericks
   end
 
-  option "with-check", "Enable additional build-time checking"
+  option "with-test", "Enable additional build-time checking"
+  deprecated_option "with-check" => "with-test"
 
   depends_on :x11
   depends_on "xerces-c"
@@ -25,7 +26,7 @@ class Sumo < Formula
   depends_on :python
 
   resource "gtest" do
-    url "https://googletest.googlecode.com/files/gtest-1.7.0.zip"
+    url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/googletest/gtest-1.7.0.zip"
     sha256 "247ca18dd83f53deb1328be17e4b1be31514cedfc1e3424f672bf11fd7e0d60d"
   end
 
