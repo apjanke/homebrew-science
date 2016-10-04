@@ -7,9 +7,9 @@ class Sumo < Formula
 
   bottle do
     cellar :any
-    sha256 "60e40e20adc9983d0ddf124b256ac5c1fd50ad7fccc1b27c703edc56d469231f" => :el_capitan
-    sha256 "1d68c7d7c1955bd548c2e02b70607798e644a073568069121d0d6946c927be60" => :yosemite
-    sha256 "ead5586821fcf6e32a1d8bbfe040b1f6349973f7963559fb0d44321f3ed84af1" => :mavericks
+    sha256 "f53ec925c204f90ac028ddd5acaf2fb8359943f490549bf5d617413c037c6583" => :sierra
+    sha256 "7581787cb7382787044cdb300e061b22bce004df850ac10badad907e82952adf" => :el_capitan
+    sha256 "cd2ee8b956e11d3299098ee0e9d58a1431f54f4bed661544f87b96c9c40169e5" => :yosemite
   end
 
   option "with-test", "Enable additional build-time checking"
